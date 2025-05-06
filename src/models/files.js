@@ -9,7 +9,7 @@ const filesSchema = new Schema(
       type: mongoose.Types.ObjectId,
       ref: "datalog",
     },
-    name: {
+    filename: {
       type: String,
     },
     cid: {

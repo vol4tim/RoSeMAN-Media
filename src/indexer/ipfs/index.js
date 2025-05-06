@@ -45,7 +45,7 @@ function read(ipfshash) {
 function mapper(json, id) {
   const list = [];
   for (const item of json) {
-    if (item.cid && item.timestamp && item.timestamp) {
+    if (item.cid && item.filename && item.timestamp) {
       list.push({ datalog_id: id, ...item });
     }
   }

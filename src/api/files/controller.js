@@ -23,7 +23,7 @@ export default {
       const files = await Files.find()
         .skip(skip)
         .limit(limit)
-        .select({ cid: 1, name: 1, timestamp: 1, _id: 0 })
+        .select({ cid: 1, filename: 1, timestamp: 1, _id: 0 })
         .sort({ timestamp: -1 });
 
       res.send({
