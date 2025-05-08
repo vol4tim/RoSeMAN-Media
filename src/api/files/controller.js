@@ -12,6 +12,17 @@ export default {
 
     try {
       const totalFiles = await Files.countDocuments();
+      if (totalFiles === 0) {
+        res.send({
+          result: {
+            files: [],
+            totalFiles: 0,
+            totalPages: 0,
+            currentPage: page,
+          },
+        });
+        return;
+      }
       const totalPages = Math.ceil(totalFiles / limit);
 
       if (page > totalPages) {
